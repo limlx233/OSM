@@ -25,6 +25,8 @@ conn.close()
 
 tab1, tab2 = st.tabs(["办公品领用表单", "库存清单"])
 
+st.write('hello')
+
 with tab1:
     # 获取类别选项
     categories = df['类别'].unique().tolist()
@@ -122,6 +124,5 @@ with tab1:
             st.info("尚未选择办公用品。")
             
 with tab2:
-    st.subheader('库存清单')
-    st.divider("rainbow")
+    st.subheader('库存清单',divider='rainbow')
     st.write(df)  # 显示库存清单
